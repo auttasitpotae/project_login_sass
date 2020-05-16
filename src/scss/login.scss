@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400&display=swap");
+
+* {
+    font-family: "Prompt", sans-serif;
+}
+body {
+    margin: 0;
+}
+
+.FlexRow {
+    display: flex;
+    background: #fafafa;
+    background: -webkit-linear-gradient(0deg,#f3f3f3, #fafafa);
+    background: -o-linear-gradient(0deg,#f3f3f3, #fafafa);
+    background: -moz-linear-gradient(0deg,#f3f3f3, #fafafa);
+    background: linear-gradient(0deg, #f3f3f3, #fafafa);
+    .FlexCol {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        img {
+            margin-left: 5%;
+            margin-bottom: 25%;
+            width: fit-content;
+        }
+
+        .FormInput {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            label {
+                margin-right: 150px;
+            }
+            input {
+                display: block;
+                width: 200px;
+                line-height: 2;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                border-style: groove;
+                border: 1px solid #ced4da
+            }
+            a {
+                margin-bottom: 40px;
+            }
+            .BtnButtonSubmit {
+                background-color: #ffd737;
+                border-radius: 0.25rem;
+                border-style: none;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: 500ms;
+                &:hover {
+                    background-color: #e4ba12;
+                    transition: 500ms;
+                }
+            }
+        }
+
+        @media only screen and (min-width: 800px) {
+            .BannerMobile {
+                display: none;
+            }
+        }
+
+        span {
+            height: 200px;
+            margin-bottom: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color: gray;
+            opacity: 0.4;
+        }
+    }
+
+    .FlexColImg {
+        display: flex;
+        flex-direction: row;
+        img {
+            position: unset;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .ImgLogo {
+        background-image: url("/images/banner-mobile.jpg");
+        display: none;
+    }
+
+    .ImgBanner {
+        display: none;
+    }
+
+    .FormInput {
+        margin-top: 10%;
+    }
+
+    .FlexCol {
+        width: 100% !important;
+        background-repeat: no-repeat;
+        .BannerMobile {
+            img {
+                display: block;
+                height: auto;
+                width: 100%;
+                margin: 0;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
